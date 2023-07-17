@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ## Layout
+
+- Mobile: 375px
+- Desktop: 1440px
+
+*/
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card-bg);
+    width: 327px;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h1 {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+.card p {
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 12px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    border-bottom: solid;
+    padding-bottom: 16px;
+    font-size: 15px;
+    line-height: 19px;
+    border-color: var(--very-dark-blue-line);
+}
+
+.crypto {
+    color: var(--cyan);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.crypto img {
+    height: 18px;
+    width: 11px;
+    margin-right: 6px;
+}
+
+.days {
+    color: var(--soft-blue);
+    display: flex;
+    align-items: center;
+}
+
+.days img {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+}
+
+.creation {
+    color: var(--soft-blue);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.creation .creator-name {
+    color: var(--white);
+    margin-left: 5px;
+}
+
+.creation img {
+    width: 33px;
+    border-radius: 33px;
+    border: 1px solid var(--white);
+    margin-right: 16px;
+}
+
+
+@media (min-width: 576px) {
+    .card {
+        width: 350px;
+    }
+}
