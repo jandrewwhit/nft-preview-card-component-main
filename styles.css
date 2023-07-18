@@ -10,6 +10,7 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --cyan-with-opacity: hsla(178, 100%, 50%, 0.4);
     --very-dark-blue-main-bg: hsl(217, 54%, 11%);
     --very-dark-blue-card-bg: hsl(216, 50%, 16%);
     --very-dark-blue-line: hsl(215, 32%, 27%);
@@ -37,12 +38,31 @@ body {
     padding: 24px;
     border-radius: 15px;
     box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+    position: relative;
 }
 
-.card img {
+.card .main-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.card .overlay {
+    background-color: var(--cyan-with-opacity);
+    position: absolute;
+    top: 24px;
+    width: 86%;
+    height: 51%;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+}
+
+.card .overlay:hover {
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: 1;
 }
 
 .card h1 {
@@ -51,6 +71,12 @@ body {
     font-weight: 600;
     line-height: 28px;
     margin-top: 24px;
+}
+
+.card h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
 .card p {
@@ -113,6 +139,12 @@ body {
     margin-left: 5px;
 }
 
+.creation .creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
 .creation img {
     width: 33px;
     border-radius: 33px;
@@ -120,9 +152,12 @@ body {
     margin-right: 16px;
 }
 
-
 @media (min-width: 576px) {
     .card {
         width: 350px;
+    }
+
+    .card .overlay {
+        height: 52.5%;
     }
 }
