@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
-/* ## Layout
-
-- Mobile: 375px
-- Desktop: 1440px
-
-*/
-
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
@@ -37,7 +30,10 @@ body {
     width: 327px;
     padding: 24px;
     border-radius: 15px;
-    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10); 
+}
+
+.card .image-container {
     position: relative;
 }
 
@@ -47,19 +43,20 @@ body {
     border-radius: 8px;
 }
 
-.card .overlay {
+.card .image-overlay {
     background-color: var(--cyan-with-opacity);
     position: absolute;
-    top: 24px;
-    width: 86%;
-    height: 51%;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 8px;
-    display: grid;
-    place-items: center;
     opacity: 0;
 }
 
-.card .overlay:hover {
+.card .image-overlay:hover {
     cursor: pointer;
     transition: all .3s ease;
     opacity: 1;
@@ -114,6 +111,7 @@ body {
 
 .days {
     color: var(--soft-blue);
+    font-weight: 400;
     display: flex;
     align-items: center;
 }
@@ -155,9 +153,5 @@ body {
 @media (min-width: 576px) {
     .card {
         width: 350px;
-    }
-
-    .card .overlay {
-        height: 52.5%;
     }
 }
