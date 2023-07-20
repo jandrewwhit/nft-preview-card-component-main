@@ -103,9 +103,12 @@ body {
     align-items: center;
 }
 
-.crypto img {
-    height: 18px;
-    width: 11px;
+.crypto::before {
+    content: url(./images/icon-ethereum.svg);
+    position: relative;
+    top: 2px;
+    width: auto;
+    height: auto;
     margin-right: 6px;
 }
 
@@ -116,9 +119,12 @@ body {
     align-items: center;
 }
 
-.days img {
-    height: 16px;
-    width: 16px;
+.days::before {
+    content: url(./images/icon-clock.svg);
+    position: relative;
+    top: 2px;
+    width: auto;
+    height: auto;
     margin-right: 6px;
 }
 
